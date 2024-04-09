@@ -1,5 +1,5 @@
 fastapi
 pymongo
 pydantic
-dotenv
+python-dotenv
 uvicorn
