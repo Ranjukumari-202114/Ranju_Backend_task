@@ -14,7 +14,7 @@ load_dotenv()
 app = FastAPI()
 
 # Connect to MongoDB Atlas
-client = os.getenv("DATABASE_URL")
+client = MongoClient(os.getenv("DATABASE_URL"))
 db = client.Library 
 
 
