@@ -3,12 +3,18 @@ from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 from pymongo import MongoClient
 from bson import ObjectId
+from dotenv import load_dotenv
 from typing import List, Optional
+
+import os
+
+
+load_dotenv()
 
 app = FastAPI()
 
 # Connect to MongoDB Atlas
-client = MongoClient("mongodb+srv://rajranju2021:Cb7y2gNfdZkNgQmj@cluster0.spq0p0s.mongodb.net/")
+client = os.getenv("DATABASE_URL")
 db = client.Library 
 
 
